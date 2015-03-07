@@ -179,7 +179,8 @@ typedef struct
     effect.constantColor = GLKVector4Make(0.2f, 0.7f, 0.2f, 1.0f);
     
     GLuint vertexArray, vertexBuffer;
-    
+
+    // Broken!
     glGenVertexArraysOES(1, &vertexArray);
     glBindVertexArrayOES(vertexArray);
     
@@ -433,7 +434,7 @@ typedef struct
     if (e.normalBuffer)
         glDeleteBuffers(1, e.normalBuffer);
     if (e.vertexArray)
-        glDeleteVertexArraysOES(1, &e.vertexArray);
+        glDeleteVertexArraysOES(1, &e.vertexArray); // Broken!
     [e.effect release];
 }
 
